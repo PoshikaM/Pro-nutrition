@@ -1,0 +1,44 @@
+*{
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.div{
+  width:50%;
+  margin-top: 30px;
+  background-color: #e3e9e2;
+}
+
+.img{
+  height: 40px;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset{
+  background-color: #727172;
+  color:white;
+  border: none;
+}
+
+.calc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+}
