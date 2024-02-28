@@ -12,17 +12,18 @@ class App extends Component{
   }
 
 render(){
-let foodDataArr = this.state.foodArr
+  let foodDataArr = this.state.foodArr
 
-const handleInput = (event) => {
-  if(event.target.value == ''){
+  const handleInput = (event) => {
+    if(event.target.value == ''){
     this.setState({foodArr:foodData})
   }
+
   let input = event.target.value.toLowerCase()
   let modifiedArr = foodDataArr.filter(function(element){
   let name = element.name
-    return(
-      name.includes(input)
+  return(
+    name.includes(input)
     )
   })
   this.setState({foodArr : modifiedArr})
@@ -33,7 +34,6 @@ const handleInput = (event) => {
       <h3> Search</h3>
       <input type="text" placeholder="Search food" onChange={handleInput}/>
       {
-
         foodDataArr.map(function(element,index){
         let img = element.img
         let name = element.name
@@ -44,13 +44,11 @@ const handleInput = (event) => {
           <FoodBox image={img} name={name} Calorie={calorie} Index={index}/>
         </div>
       )
-        })
-      }
+    })
+    }
     </div>
   )
 }
-
-
 }
 
 export default App
